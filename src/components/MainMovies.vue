@@ -17,6 +17,7 @@
 
 <template>
     <section>
+        <h2>Movies</h2>
         <ul v-if="store.moviesList.length !== 0">
             <ItemCard
             v-for="movie in store.moviesList"

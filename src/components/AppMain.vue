@@ -14,7 +14,7 @@
 <template>
     <main>
         <MainMovies/>
-        <!-- <MainSeries/> -->
+        <MainSeries/>
     </main>
 </template>
 

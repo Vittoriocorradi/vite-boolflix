@@ -31,8 +31,16 @@
           }
         })
         .then((response) => {
-          console.log(response.data.results);
           store.moviesList = response.data.results;
+        })
+        axios.get(store.config.serieUri, {
+          params: {
+            api_key: store.config.apiKey,
+            query: store.searchInput
+          }
+        })
+        .then((response) => {
+          store.seriesList = response.data.results;
         })
       }
     }

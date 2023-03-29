@@ -23,8 +23,8 @@
 <template>
     <article>
         <li>
-            <h1> {{ title }} </h1>
-            <h2> {{ ogTitle }} </h2>
+            <h3> {{ title }} </h3>
+            <h4> {{ ogTitle }} </h4>
             <div v-if="!flagsList.includes(language)"> {{ language }} </div>
             <div v-else>
                 <img :src="'/flags-imgs/' + language + '.png'" alt="">
