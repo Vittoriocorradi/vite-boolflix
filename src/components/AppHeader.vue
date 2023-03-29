@@ -13,7 +13,7 @@
 <template>
     <header>
         <label for="name-search"></label>
-        <input type="text" id="name-search" placeholder="Inserire il titolo" v-model="store.searchInput">
+        <input type="text" id="name-search" placeholder="Inserire il titolo" @keyup="$emit('type')" v-model="store.searchInput">
         <button type="button" @click="$emit('search')">Cerca</button>
     </header>
 </template>
