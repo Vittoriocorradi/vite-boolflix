@@ -24,7 +24,7 @@
             :title="series.name"
             :ogTitle="series.original_name"
             :language="series.original_language"
-            :vote="series.vote_average"
+            :rating="Math.ceil(series.vote_average / 2)"
             :poster="series.poster_path"
             />
         </ul>

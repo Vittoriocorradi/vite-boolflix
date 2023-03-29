@@ -24,7 +24,7 @@
             :title="movie.title"
             :ogTitle="movie.original_title"
             :language="movie.original_language"
-            :vote="movie.vote_average"
+            :rating="Math.ceil(movie.vote_average / 2)"
             :poster="movie.poster_path"
             />
         </ul>

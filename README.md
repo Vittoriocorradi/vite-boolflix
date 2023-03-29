@@ -34,3 +34,5 @@ Usando un procedimento uguale a quello della milestone 1, dato un titolo o parte
 ## Milestone 3
 
 Aggiunta l'immagine del poster agli elementi stampati in pagina. Se l'immagine non fosse disponibile, visualizzare un messaggio che riporta quanto tale.
+
+Il voto di ogni elemento è stato trasformato in un numero intero compreso tra 1 e 5. Viene rappresentato sotto forma di tot stelle piene in cinque stelle sennò vuote a seconda del punteggio.

@@ -7,7 +7,7 @@
             title: String,
             ogTitle: String,
             language: String,
-            vote: Number,
+            rating: Number,
             poster: String
         },
         data() {
@@ -44,7 +44,9 @@
                         <img :src="'/flags-imgs/' + language + '.png'" :alt="language + ' flag'">
                     </div>
                 </div>
-                <div> {{ vote }} </div>
+                <div v-for="(star, index) in 5">
+                    <i class="fa-star" :class="index < rating ? 'fa-solid' : 'fa-regular'"></i>
+                </div>
             </div>
             <hr>
         </li>
