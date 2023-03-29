@@ -30,3 +30,7 @@ Creato una lista chiamata flagsList. Nella lista saranno presenti le lingue di c
 Se la lingua di un elemento è presente nella lista, sostituire il testo con l'immagine della bandiera; altrimenti mantenere la scritta.
 
 Usando un procedimento uguale a quello della milestone 1, dato un titolo o parte di un titolo in input e premuto il bottone, si stamperà in pagina anche una lista di massimo 20 serie tv, anche queste con titolo, titolo originale, lingua e voto.
+
+## Milestone 3
+
+Aggiunta l'immagine del poster agli elementi stampati in pagina. Se l'immagine non fosse disponibile, visualizzare un messaggio che riporta quanto tale.

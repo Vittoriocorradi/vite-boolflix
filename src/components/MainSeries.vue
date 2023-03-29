@@ -25,6 +25,7 @@
             :ogTitle="series.original_name"
             :language="series.original_language"
             :vote="series.vote_average"
+            :poster="series.poster_path"
             />
         </ul>
         <div v-else-if="store.searchInput === '' | store.researchActive === false">
