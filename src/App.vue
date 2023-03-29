@@ -18,12 +18,8 @@
       }
     },
     methods: {
-      searching() {
-        store.researchActive = false;
-      },
       // Richiamo l'api dei film
       search() {
-        store.researchActive = true;
         axios.get(store.config.movieUri, {
           params: {
             api_key: store.config.apiKey,
@@ -48,7 +44,7 @@
 </script>
 
 <template>
-  <AppHeader @search="search" @type="searching"/>
+  <AppHeader @search="search"/>
   <AppMain/>
   <AppFooter/>
 </template>

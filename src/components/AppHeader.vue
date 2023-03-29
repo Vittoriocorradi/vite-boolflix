@@ -17,8 +17,7 @@
         </h1>
         <div class="search-bar">
             <label for="name-search"><i class="fa-solid fa-magnifying-glass"></i></label>
-            <input type="text" id="name-search" placeholder="Inserire un titolo" @keyup="$emit('type')" v-model="store.searchInput">
-            <!-- <button type="button" @click="$emit('search')">Cerca</button> -->
+            <input type="text" id="name-search" placeholder="Inserire un titolo" @keyup="$emit('search')" v-model="store.searchInput">
         </div>
         
     </header>
@@ -29,7 +28,7 @@
         position: sticky;
         top: 0;
         left: 0;
-        background-color: #0b0b0b;
+        background: linear-gradient(to bottom,#000, #141414);;
         display: flex;
         justify-content: space-between;
         align-items: center;

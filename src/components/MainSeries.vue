@@ -31,7 +31,7 @@
         <div v-else-if="store.searchInput === '' | store.researchActive === false">
             Cerca le serie che vuoi!
         </div>
-        <div v-else-if="store.researchActive === true">
+        <div v-else-if="store.searchInput.length > 1">
             Impossibile trovare risultati
         </div>
     </section>
