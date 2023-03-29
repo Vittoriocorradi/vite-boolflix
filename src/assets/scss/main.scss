@@ -2,3 +2,7 @@
 @use './_partials/variables.scss' as *;
 @use './_partials/typography.scss' as *;
 @use './_partials/reset.scss' as *;
+
+.container {
+    @include my-container(87.5rem);
+}
