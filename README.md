@@ -13,7 +13,7 @@ Installare i pacchetti con  -->  npm install
 - Sass
 - Axios
 - @fontsource/bebas-neue
-- @fontsource/martel-sans
+- @fontsource/cabin-condensed
 
 # Milestones
 
