@@ -7,21 +7,36 @@
 
   export default {
     name: 'App',
+    components: {
+      AppHeader,
+      AppMain,
+      AppFooter
+    },
     data() {
       return {
         store
       }
     },
-    components: {
-      AppHeader,
-      AppMain,
-      AppFooter
+    methods: {
+      search() {
+        console.log('Ho letto il bottone');
+        axios.get(store.config.movieUri, {
+          params: {
+            api_key: store.config.apiKey,
+            query: store.searchInput
+          }
+        })
+        .then((response) => {
+          console.log(response.data);
+          console.log(response);
+        })
+      }
     }
   }
 </script>
 
 <template>
-  <AppHeader/>
+  <AppHeader @search="search"/>
   <AppMain/>
   <AppFooter/>
 </template>
