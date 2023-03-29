@@ -23,3 +23,8 @@ Al premere del bottone compare una lista di massimo 20 film con titolo, titolo o
 Aggiunta una variabile researchActive che si modifica al premere del bottone e al digitare nell'input:
 - al premere del bottone la variabile prende valore true. Se la lista di film fosse vuota (nessun film trovato), viene riportato un messaggio che dice che è impossibile trovare risultati.
 - al digitare nell'input la variabile prende valore false. Si modifica il messaggio sopra scritto, che viene cambiato con una frase iniziale di cercare un film.
+
+## Milestone 2
+
+Creato una lista chiamata flagsList. Nella lista saranno presenti le lingue di cui c'è l'immagine della bandiera della stessa nazione nella cartella public.  
+Se la lingua di un elemento è presente nella lista, sostituire il testo con l'immagine della bandiera; altrimenti mantenere la scritta.
