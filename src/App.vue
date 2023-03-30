@@ -38,18 +38,6 @@
         .then((response) => {
           store.seriesList = response.data.results;
         })
-        setTimeout(() => {
-          this.store.moviesList.forEach(el => {
-            if (el.original_language === 'en') {
-              el.original_language = 'gb';
-            }
-          });
-          this.store.seriesList.forEach(el => {
-            if (el.original_language === 'en') {
-              el.original_language = 'gb';
-            }
-          });
-        }, 500);
       }
     }
   }

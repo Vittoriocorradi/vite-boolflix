@@ -32,11 +32,10 @@
             ul {
                 display: flex;
                 flex-wrap: wrap;
+                width: 100%;
 
                 li {
-                    width: 20%;
-
-                    
+                    // margin: .625rem;
                 }
             }
         }

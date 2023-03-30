@@ -10,24 +10,15 @@
             rating: Number,
             poster: String
         },
-        data() {
-            return {
-                flagsList: [
-                    'gb',
-                    'it',
-                    'es',
-                    'kn',
-                    'de',
-                    'ar',
-                    'fr',
-                    'pt',
-                    'tr',
-                    'ru',
-                    'cn',
-                    'no',
-                    'pl',
-                    'tl'
-                ]
+        computed: {
+            getLanguage() {
+                switch(this.language) {
+                    case 'en':
+                        return 'gb'
+
+                    default:
+                        return this.language
+                }
             }
         }
     }
@@ -48,10 +39,8 @@
             <div class="item-info">
                 <h3> {{ title }} </h3>
                 <h4> {{ ogTitle }} </h4>
-                <!-- Condizione presenza dell'immagine della nazionalità -->
                 <div class="language">
-                    <!-- <div v-if="!flagsList.includes(language)"> {{ language }} </div> -->
-                    <span :class="'flag-icon flag-icon-' + language"></span>
+                    <span :class="'flag-icon flag-icon-' + getLanguage"></span>
                 </div>
                 <div v-for="(star, index) in 5">
                     <i class="fa-star" :class="index < rating ? 'fa-solid' : 'fa-regular'"></i>
