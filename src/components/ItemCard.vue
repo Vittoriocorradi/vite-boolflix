@@ -29,6 +29,17 @@ export default {
 
 <template>
     <li>
+        <!-- Informazioni dell'elemento -->
+        <div class="item-info">
+            <h3> {{ title }} </h3>
+            <h4> {{ ogTitle }} </h4>
+            <div class="language">
+                <span :class="'flag-icon flag-icon-' + getLanguage"></span>
+            </div>
+            <font-awesome-icon v-for="n in getRating" icon="fa-star fa-solid" />
+            <font-awesome-icon v-for="n in 5 - getRating" icon="fa-star fa-regular" />
+            
+        </div>
         <!-- Immagine del poster -->
         <div class="item-poster">
             <div v-if="poster !== null" class="img">
@@ -40,16 +51,7 @@ export default {
                 <div> Title : {{ title }} </div>
             </div>
         </div>
-        <!-- Informazioni dell'elemento -->
-        <div class="item-info">
-            <h3> {{ title }} </h3>
-            <h4> {{ ogTitle }} </h4>
-            <div class="language">
-                <span :class="'flag-icon flag-icon-' + getLanguage"></span>
-            </div>
-            <font-awesome-icon v-for="n in getRating" icon="fa-star fa-solid" />
-            <font-awesome-icon v-for="n in 5 - getRating" icon="fa-star fa-regular" />
-        </div>
+        
     </li>
 </template>
 
@@ -57,13 +59,22 @@ export default {
 li {
     margin: .625rem;
     width: calc(100% / 5 - 20px);
+    position: relative;
+    height: 24.375rem;
+
+    &:hover .item-info {
+        z-index: 1;
+        border: .0625rem solid var(--secondary-color);
+    }
 
     .item-poster {
-        height: 24.375rem;
+        position: relative;
+        height: 100%;
 
         .not-found {
             padding: .625rem;
             flex-direction: column;
+            background-color: #141414;
 
             .not-found-icon {
                 font-size: 2em;
@@ -74,6 +85,13 @@ li {
                 margin-bottom: .9375rem;
             }
         }
+    }
+
+    .item-info {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background-color: #141414;
     }
 }
 </style>
