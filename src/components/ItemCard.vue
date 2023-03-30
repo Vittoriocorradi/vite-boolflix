@@ -13,8 +13,20 @@
         data() {
             return {
                 flagsList: [
-                    'en',
-                    'it'
+                    'gb',
+                    'it',
+                    'es',
+                    'kn',
+                    'de',
+                    'ar',
+                    'fr',
+                    'pt',
+                    'tr',
+                    'ru',
+                    'cn',
+                    'no',
+                    'pl',
+                    'tl'
                 ]
             }
         }
@@ -22,7 +34,6 @@
 </script>
 
 <template>
-    <article>
         <li>
             <!-- Immagine del poster -->
             <div class="item-poster">
@@ -39,16 +50,12 @@
                 <h4> {{ ogTitle }} </h4>
                 <!-- Condizione presenza dell'immagine della nazionalità -->
                 <div class="language">
-                    <div v-if="!flagsList.includes(language)"> {{ language }} </div>
-                    <div v-else>
-                        <img :src="'/flags-imgs/' + language + '.png'" :alt="language + ' flag'">
-                    </div>
+                    <!-- <div v-if="!flagsList.includes(language)"> {{ language }} </div> -->
+                    <span :class="'flag-icon flag-icon-' + language"></span>
                 </div>
                 <div v-for="(star, index) in 5">
                     <i class="fa-star" :class="index < rating ? 'fa-solid' : 'fa-regular'"></i>
                 </div>
             </div>
-            <hr>
         </li>
-    </article>
 </template>

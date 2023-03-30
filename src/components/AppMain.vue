@@ -13,11 +13,32 @@
 
 <template>
     <main>
-        <MainMovies/>
-        <MainSeries/>
+        <div class="container">
+            <MainMovies/>
+            <MainSeries/>
+        </div>
     </main>
 </template>
 
 <style lang="scss" scoped>
 
+    main {
+        height: 100%;
+        background-color: #141414;
+
+        :deep(section) {
+            color: var(--secondary-color);
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    width: 20%;
+
+                    
+                }
+            }
+        }
+    }
 </style>

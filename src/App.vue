@@ -38,6 +38,18 @@
         .then((response) => {
           store.seriesList = response.data.results;
         })
+        setTimeout(() => {
+          this.store.moviesList.forEach(el => {
+            if (el.original_language === 'en') {
+              el.original_language = 'gb';
+            }
+          });
+          this.store.seriesList.forEach(el => {
+            if (el.original_language === 'en') {
+              el.original_language = 'gb';
+            }
+          });
+        }, 500);
       }
     }
   }
@@ -50,5 +62,11 @@
 </template>
 
 <style lang="scss">
+  body {
+    height: 100%;
 
+    #app {
+      height: 100%;
+    };
+  }
 </style>
