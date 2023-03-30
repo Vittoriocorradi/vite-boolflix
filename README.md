@@ -30,8 +30,7 @@ Aggiunta una variabile researchActive che si modifica al premere del bottone e a
 
 ## Milestone 2
 
-Creato una lista chiamata flagsList. Nella lista saranno presenti le lingue di cui c'è l'immagine della bandiera della stessa nazione nella cartella public.  
-Se la lingua di un elemento è presente nella lista, sostituire il testo con l'immagine della bandiera; altrimenti mantenere la scritta.
+Aggiunto un pacchetto per inserire le immagini delle bandiere delle varie nazionalità. Modificato alcuni dati ricevuti dall'Api per farli corrispondere a quelli del pacchetto.
 
 Usando un procedimento uguale a quello della milestone 1, dato un titolo o parte di un titolo in input e premuto il bottone, si stamperà in pagina anche una lista di massimo 20 serie tv, anche queste con titolo, titolo originale, lingua e voto.
 
@@ -45,3 +44,10 @@ Il voto di ogni elemento è stato trasformato in un numero intero compreso tra 1
 
 Aggiunto stile con css e scss per ricreare un applicativo simil Netflix.  
 I vari elementi sono rappresentati sotto forma di card. Inizialmente si vedranno solo i poster, ma portando il cursore sopra un elemento al posto del poster comparirà un box con alcune delle informazioni principali dell'elemento.
+
+
+> ## To-do
+> 
+> - Aggiungere una modale scatenata dal click su un film/serie. La modale riporterà in maniera più chiara e leggibile le informazioni di ogni elemento.  
+>    > Aggiungere alle informazioni anche i nomi degli attori e i generi.
+> - Risolvere il problema delle bandiere che non compaiono se la lingua non combacia.  
