@@ -19,6 +19,9 @@
                     default:
                         return this.language
                 }
+            },
+            getRating() {
+                return Math.ceil(this.rating / 2)
             }
         }
     }
@@ -42,9 +45,8 @@
                 <div class="language">
                     <span :class="'flag-icon flag-icon-' + getLanguage"></span>
                 </div>
-                <div v-for="(star, index) in 5">
-                    <i class="fa-star" :class="index < rating ? 'fa-solid' : 'fa-regular'"></i>
-                </div>
+                <font-awesome-icon v-for="n in getRating" icon="fa-star fa-solid"/>
+                <font-awesome-icon v-for="n in 5-getRating" icon="fa-star fa-regular"/>
             </div>
         </li>
 </template>

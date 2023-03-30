@@ -12,6 +12,8 @@ Installare i pacchetti con  -->  npm install
 
 - Sass
 - Axios
+- Fontawesome
+- flag-icon-css
 - @fontsource/bebas-neue
 - @fontsource/cabin-condensed
 
