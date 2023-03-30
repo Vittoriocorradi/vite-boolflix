@@ -33,9 +33,23 @@
                 display: flex;
                 flex-wrap: wrap;
                 width: 100%;
+                margin: 0 -.625rem;
 
                 li {
-                    // margin: .625rem;
+                    margin: .625rem;
+                    width: calc(100% / 5 - 20px);
+
+                    .item-poster {
+                        height: 24.375rem;
+
+                        .not-found {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            padding: .625rem;
+                        }
+                    }
                 }
             }
         }

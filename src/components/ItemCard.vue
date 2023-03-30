@@ -31,11 +31,13 @@
         <li>
             <!-- Immagine del poster -->
             <div class="item-poster">
-                <div v-if="poster !== null">
+                <div v-if="poster !== null" class="img">
                     <img :src="'https://image.tmdb.org/t/p/w342' + poster" :alt="title + ' poster'">
                 </div>
-                <div v-else>
-                    Impossibile trovare l'immagine
+                <div v-else class="img not-found">
+                    <font-awesome-icon class="not-found-icon" :icon="['far', 'circle-xmark']"/>
+                    <span class="not-found-text">Impossibile trovare l'immagine</span>
+                    <div> Title : {{ title }} </div>
                 </div>
             </div>
             <!-- Informazioni dell'elemento -->
@@ -50,3 +52,14 @@
             </div>
         </li>
 </template>
+
+<style lang="scss">
+    .not-found-icon {
+        font-size: 2em;
+        margin-bottom: .9375rem;
+    }
+
+    .not-found-text {
+        margin-bottom: .9375rem;
+    }
+</style>
