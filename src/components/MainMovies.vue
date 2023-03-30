@@ -28,10 +28,10 @@
             :poster="movie.poster_path"
             />
         </ul>
-        <div v-else-if="store.searchInput === ''">
+        <div class="info-box center-flex" v-else-if="store.searchInput === ''">
             Cerca i film che vuoi!
         </div>
-        <div v-else-if="store.searchInput.length > 1">
+        <div class="info-box center-flex" v-else-if="store.searchInput.length > 1">
             Impossibile trovare risultati
         </div>
     </section>

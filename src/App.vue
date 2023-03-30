@@ -51,7 +51,7 @@
 
 <style lang="scss">
   body {
-    height: 100%;
+    height: 100vh;
 
     #app {
       height: 100%;

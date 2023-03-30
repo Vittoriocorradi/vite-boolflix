@@ -23,35 +23,34 @@
 <style lang="scss" scoped>
 
     main {
-        height: 100%;
+        min-height: 100%;
         background-color: #141414;
 
-        :deep(section) {
-            color: var(--secondary-color);
+        .container {
+            padding: 2.5rem 0;
 
-            ul {
-                display: flex;
-                flex-wrap: wrap;
-                width: 100%;
-                margin: 0 -.625rem;
+            :deep(section) {
+                color: var(--secondary-color);
+                margin-bottom: 3.125rem;
+    
+                h2 {
+                    margin-bottom: 2.5rem;
+                }
+    
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    margin: 0 -.625rem;
+                }
 
-                li {
-                    margin: .625rem;
-                    width: calc(100% / 5 - 20px);
-
-                    .item-poster {
-                        height: 24.375rem;
-
-                        .not-found {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            flex-direction: column;
-                            padding: .625rem;
-                        }
-                    }
+                .info-box {
+                    height: 12.5rem;
+                    background: radial-gradient(closest-side, #444, #141414);
+                    font-size: 2em;
                 }
             }
         }
+
     }
 </style>

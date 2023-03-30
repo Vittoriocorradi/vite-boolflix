@@ -28,10 +28,10 @@
             :poster="series.poster_path"
             />
         </ul>
-        <div v-else-if="store.searchInput === '' | store.researchActive === false">
+        <div class="info-box center-flex" v-else-if="store.searchInput === '' | store.researchActive === false">
             Cerca le serie che vuoi!
         </div>
-        <div v-else-if="store.searchInput.length > 1">
+        <div class="info-box center-flex" v-else-if="store.searchInput.length > 1">
             Impossibile trovare risultati
         </div>
     </section>

@@ -29,7 +29,7 @@
         top: 0;
         left: 0;
         z-index: 5;
-        background: linear-gradient(to bottom,#000, #141414);;
+        background: linear-gradient(to bottom,#000, #141414);
         display: flex;
         justify-content: space-between;
         align-items: center;
