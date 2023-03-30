@@ -50,7 +50,7 @@ export default {
                 <strong>Title: </strong>
                 <span> {{ title }} </span> 
             </div>
-            <div class="og-title">
+            <div class="og-title" v-show="title !== ogTitle">
                 <strong>Original Title: </strong>
                 <span> {{ ogTitle }} </span> 
             </div>
