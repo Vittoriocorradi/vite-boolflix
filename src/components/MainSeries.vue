@@ -26,6 +26,7 @@
             :language="series.original_language"
             :rating="series.vote_average"
             :poster="series.poster_path"
+            :overview="series.overview"
             />
         </ul>
         <div class="info-box center-flex" v-else-if="store.searchInput === '' | store.researchActive === false">

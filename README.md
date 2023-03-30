@@ -15,7 +15,7 @@ Installare i pacchetti con  -->  npm install
 - Fontawesome
 - flag-icon-css
 - @fontsource/bebas-neue
-- @fontsource/cabin-condensed
+- @fontsource/roboto
 
 # Milestones
 

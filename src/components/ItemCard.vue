@@ -8,13 +8,28 @@ export default {
         ogTitle: String,
         language: String,
         rating: Number,
-        poster: String
+        poster: String,
+        overview: String
     },
     computed: {
         getLanguage() {
             switch (this.language) {
                 case 'en':
-                    return 'gb'
+                    return 'gb';
+                case 'ja':
+                    return 'jp';
+                case 'ko':
+                    return 'kr';
+                case 'zh':
+                    return 'cn';
+                case 'da':
+                    return 'dk';
+                case 'hi':
+                    return 'in';
+                case 'te':
+                    return 'in';
+                case 'ur':
+                    return 'pk';
 
                 default:
                     return this.language
@@ -31,14 +46,25 @@ export default {
     <li>
         <!-- Informazioni dell'elemento -->
         <div class="item-info">
-            <h3> {{ title }} </h3>
-            <h4> {{ ogTitle }} </h4>
+            <div class="title">
+                <strong>Title: </strong>
+                <span> {{ title }} </span> 
+            </div>
+            <div class="og-title">
+                <strong>Original Title: </strong>
+                <span> {{ ogTitle }} </span> 
+            </div>
             <div class="language">
                 <span :class="'flag-icon flag-icon-' + getLanguage"></span>
             </div>
-            <font-awesome-icon v-for="n in getRating" icon="fa-star fa-solid" />
-            <font-awesome-icon v-for="n in 5 - getRating" icon="fa-star fa-regular" />
-            
+            <div class="rating">
+                <font-awesome-icon class="rated" v-for="n in getRating" icon="fa-star fa-solid" />
+                <font-awesome-icon v-for="n in 5 - getRating" icon="fa-star fa-regular" />
+            </div>
+            <div class="overview">
+                <strong>Overview: </strong>
+                <span> {{ overview }} </span> 
+            </div>
         </div>
         <!-- Immagine del poster -->
         <div class="item-poster">
@@ -51,7 +77,6 @@ export default {
                 <div> Title : {{ title }} </div>
             </div>
         </div>
-        
     </li>
 </template>
 
@@ -75,6 +100,7 @@ li {
             padding: .625rem;
             flex-direction: column;
             background-color: #141414;
+            border: .0625rem solid #888;
 
             .not-found-icon {
                 font-size: 2em;
@@ -92,6 +118,28 @@ li {
         width: 100%;
         position: absolute;
         background-color: #141414;
+        overflow-y: hidden;
+        padding: .4375rem;
+
+        .title {
+            margin-bottom: .25rem;
+        }
+
+        .og-title {
+            margin-bottom: .3125rem;
+        }
+
+        .language {
+            margin: .625rem 0;
+        }
+
+        .rating {
+            margin-bottom: .75rem;
+
+            .rated {
+                color: #f9e666;
+            }
+        }
     }
 }
 </style>

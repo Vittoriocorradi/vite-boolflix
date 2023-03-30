@@ -26,6 +26,7 @@
             :language="movie.original_language"
             :rating="movie.vote_average"
             :poster="movie.poster_path"
+            :overview="movie.overview"
             />
         </ul>
         <div class="info-box center-flex" v-else-if="store.searchInput === ''">
