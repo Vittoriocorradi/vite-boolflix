@@ -27,7 +27,7 @@
         background-color: #141414;
 
         .container {
-            padding: 2.5rem 0;
+            padding: 7.5rem 0 2.5rem;
 
             :deep(section) {
                 color: var(--secondary-color);

@@ -25,8 +25,9 @@
 
 <style lang="scss" scoped>
     header {
-        position: sticky;
+        position: fixed;
         top: 0;
+        right: 0;
         left: 0;
         z-index: 5;
         background: linear-gradient(to bottom,#000, #141414);

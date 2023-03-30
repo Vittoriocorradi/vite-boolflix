@@ -57,7 +57,7 @@ export default {
 
 <style lang="scss">
 li {
-    margin: .625rem;
+    margin: 1.25rem .625rem;
     width: calc(100% / 5 - 20px);
     position: relative;
     height: 24.375rem;
