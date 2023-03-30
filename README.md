@@ -40,3 +40,8 @@ Usando un procedimento uguale a quello della milestone 1, dato un titolo o parte
 Aggiunta l'immagine del poster agli elementi stampati in pagina. Se l'immagine non fosse disponibile, visualizzare un messaggio che riporta quanto tale.
 
 Il voto di ogni elemento è stato trasformato in un numero intero compreso tra 1 e 5. Viene rappresentato sotto forma di tot stelle piene in cinque stelle sennò vuote a seconda del punteggio.
+
+## Milestone 4
+
+Aggiunto stile con css e scss per ricreare un applicativo simil Netflix.  
+I vari elementi sono rappresentati sotto forma di card. Inizialmente si vedranno solo i poster, ma portando il cursore sopra un elemento al posto del poster comparirà un box con alcune delle informazioni principali dell'elemento.
