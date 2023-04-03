@@ -49,7 +49,7 @@ I vari elementi sono rappresentati sotto forma di card. Inizialmente si vedranno
 
 ## Milestone 5
 
-Richiamata dall'Api la lista dei generi. Assegnato a ogni film i suoi generi e stampati nel box info di ogni elemento.
+Richiamata dall'Api la lista dei generi. Assegnato a ogni film e serie tv i suoi generi e stampati nel box info di ogni elemento.
 
 > ## To-do
 > 

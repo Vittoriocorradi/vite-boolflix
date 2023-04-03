@@ -168,8 +168,8 @@ li {
             overflow-wrap: break-word;
             
             .genre:not(:last-child)::after {
-                content: '\25cf';
-                margin: 0 .3125rem;
+                content: '\002C';
+                margin-right: .3125rem;
             }
         }
     }
