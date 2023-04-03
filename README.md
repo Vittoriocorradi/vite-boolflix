@@ -47,6 +47,9 @@ Modificato il metodo di ricerca: invece di avviarsi al premere del bottone, la r
 Aggiunto stile con css e scss per ricreare un applicativo simil Netflix.  
 I vari elementi sono rappresentati sotto forma di card. Inizialmente si vedranno solo i poster, ma portando il cursore sopra un elemento al posto del poster comparirà un box con alcune delle informazioni principali dell'elemento.
 
+## Milestone 5
+
+Richiamata dall'Api la lista dei generi. Assegnato a ogni film i suoi generi e stampati nel box info di ogni elemento.
 
 > ## To-do
 > 
