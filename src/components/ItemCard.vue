@@ -1,5 +1,5 @@
 <script>
-
+import { store } from '../store';
 
 export default {
     name: 'Item',
@@ -9,7 +9,14 @@ export default {
         language: String,
         rating: Number,
         poster: String,
-        overview: String
+        overview: String,
+        genreList: Array,
+        movieGenres: Array
+    },
+    data() {
+        return {
+            store
+        }
     },
     computed: {
         getLanguage() {
@@ -37,6 +44,17 @@ export default {
         },
         getRating() {
             return Math.ceil(this.rating / 2)
+        },
+        getGenres() {
+            let itemGenres = []
+            this.genreList.forEach(el => {
+                for (let i = 0; i < this.movieGenres.length; i++) {
+                    if (el.id === this.movieGenres[i]) {
+                        itemGenres.push(el);
+                    }
+                }
+            })
+            return itemGenres;
         }
     }
 }
@@ -64,6 +82,10 @@ export default {
             <div class="overview">
                 <strong>Overview: </strong>
                 <span> {{ overview }} </span> 
+            </div>
+            <div class="genres">
+                <strong>Genres: </strong>
+                <span class="genre" v-for="genre in getGenres"> {{ genre.name }} </span>
             </div>
         </div>
         <!-- Immagine del poster -->
@@ -118,7 +140,7 @@ li {
         width: 100%;
         position: absolute;
         background-color: #141414;
-        overflow-y: hidden;
+        overflow: hidden;
         padding: .4375rem;
 
         .title {
@@ -138,6 +160,16 @@ li {
 
             .rated {
                 color: #f9e666;
+            }
+        }
+
+        .genres {
+            margin-top: .3125rem;
+            overflow-wrap: break-word;
+            
+            .genre:not(:last-child)::after {
+                content: '\25cf';
+                margin: 0 .3125rem;
             }
         }
     }

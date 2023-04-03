@@ -18,7 +18,7 @@
       }
     },
     methods: {
-      // Richiamo l'api dei film
+      // Richiamo l'api dei film e serie tv
       search() {
         axios.get(store.config.movieUri, {
           params: {
@@ -39,8 +39,9 @@
           store.seriesList = response.data.results;
         })
       },
+      // Richiamo api della lista dei generi
       callGenreList() {
-        axios.get(store.config.genreList, {
+        axios.get(store.config.genreUri, {
           params: {
             api_key: store.config.apiKey,
           }

@@ -27,6 +27,8 @@
             :rating="movie.vote_average"
             :poster="movie.poster_path"
             :overview="movie.overview"
+            :genreList="store.genreList"
+            :movieGenres="movie.genre_ids"
             />
         </ul>
         <div class="info-box center-flex" v-else-if="store.searchInput === ''">
