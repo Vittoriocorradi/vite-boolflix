@@ -38,7 +38,21 @@
         .then((response) => {
           store.seriesList = response.data.results;
         })
+      },
+      callGenreList() {
+        axios.get(store.config.genreList, {
+          params: {
+            api_key: store.config.apiKey,
+          }
+        })
+        .then((response) => {
+          store.genreList = response.data.genres;
+          console.log(store.genreList);
+        })
       }
+    },
+    mounted() {
+      this.callGenreList();
     }
   }
 </script>
