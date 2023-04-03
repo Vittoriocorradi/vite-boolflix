@@ -42,6 +42,8 @@ Il voto di ogni elemento è stato trasformato in un numero intero compreso tra 1
 
 ## Milestone 4
 
+Modificato il metodo di ricerca: invece di avviarsi al premere del bottone, la ricerca si avvia al premere dei tasti sulla tastiera.
+
 Aggiunto stile con css e scss per ricreare un applicativo simil Netflix.  
 I vari elementi sono rappresentati sotto forma di card. Inizialmente si vedranno solo i poster, ma portando il cursore sopra un elemento al posto del poster comparirà un box con alcune delle informazioni principali dell'elemento.
 
